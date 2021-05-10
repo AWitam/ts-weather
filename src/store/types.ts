@@ -54,7 +54,7 @@ export interface AlertState {
 
 export interface AlertAction {
   type: typeof SET_ALERT;
-  payload: "string";
+  payload: string;
 }
 
 export interface WeatherError {
@@ -75,7 +75,6 @@ interface GetWeatherAction {
 
 interface SetLoadingAction {
   type: typeof SET_LOADING;
-  PAYLOAD: WeatherState;
 }
 
 interface SetErrorAction {
