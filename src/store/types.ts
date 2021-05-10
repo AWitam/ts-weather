@@ -48,8 +48,13 @@ export interface WeatherData {
   weather: Weather[];
 }
 
-export interface AlertAction {
+export interface AlertState {
   message: string;
+}
+
+export interface AlertAction {
+  type: typeof SET_ALERT;
+  payload: "string";
 }
 
 export interface WeatherError {
@@ -78,7 +83,4 @@ interface SetErrorAction {
   payload: string;
 }
 
-export type WeatherAction =
-  | GetWeatherAction
-  | SetLoadingAction
-  | SetErrorAction;
+export type WeatherAction = GetWeatherAction | SetLoadingAction | SetErrorAction;
