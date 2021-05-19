@@ -15,10 +15,6 @@ const App: FC = () => {
   const error = useSelector((state: RootState) => state.weather.error);
   const alertMsg = useSelector((state: RootState) => state.alert.message);
 
-  const handleClose = () => {
-    dispatch(setAlert(""));
-  };
-
   return (
     <div className="App">
       <Search title="TS Weather" />

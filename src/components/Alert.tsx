@@ -9,12 +9,16 @@ const Alert: FC<AlertProps> = ({ message, onClose }) => {
   return (
     <div className="modal is-active has-text-centered">
       <div className="modal-background" onClick={onClose}></div>
-      <header className="modal-card-head has-background-danger">
-        <p className="modal-card-title has-test-white">{message}</p>
-      </header>
-      <footer className="modal-card-foot" style={{ justifyContent: "center" }}>
-        <button className="button" onClick={onClose}></button>
-      </footer>
+      <div className="modal-card">
+        <header className="modal-card-head has-background-danger">
+          <p className="modal-card-title has-text-white">{message}</p>
+        </header>
+        <footer className="modal-card-foot" style={{ justifyContent: "center" }}>
+          <button className="button" onClick={onClose}>
+            X
+          </button>
+        </footer>
+      </div>
     </div>
   );
 };
